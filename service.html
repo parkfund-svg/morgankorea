@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="description" content="Professional interior architecture and construction services">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="image/logo.png">
+    <title>서비스 | (유)모건코리아</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .page-hero {
+            height: 50vh;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.2), rgba(52, 73, 94, 0.2)), 
+                        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+
+        .service-detail {
+            padding: 100px 0;
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-bottom: 80px;
+        }
+
+        .service-detail-content h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .service-detail-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .service-detail-content ul {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .service-detail-content ul li {
+            padding: 15px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .service-detail-content ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .process-section {
+            background-color: var(--light-gray);
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/logo.png" alt="모건코리아 로고" style="height: 50px;">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="project.html">PROJECT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div>
+            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 15px;">SERVICE</h1>
+            <p style="font-size: 18px; font-weight: 300; opacity: 0.9;">전문적인 실내건축 인테리어 서비스</p>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h3>상업공간 인테리어</h3>
+                    <p>오피스, 매장, 카페, 레스토랑 등 다양한 상업공간에 최적화된 인테리어 솔루션을 제공합니다. 
+                    브랜드 아이덴티티를 반영하고 기능성과 심미성을 동시에 만족시키는 공간을 완성합니다.</p>
+                    <p>고객의 비즈니스 특성을 이해하고 공간 활용도를 극대화하여 매출 향상에 기여할 수 있는 
+                    공간을 디자인합니다.</p>
+                    <ul>
+                        <li>오피스 공간 설계 및 시공</li>
+                        <li>리테일 매장 인테리어</li>
+                        <li>카페 & 레스토랑 인테리어</li>
+                        <li>쇼룸 및 전시공간 연출</li>
+                        <li>브랜딩 공간 디자인</li>
+                    </ul>
+                </div>
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="상업공간">
+                </div>
+            </div>
+
+            <div class="service-detail-grid" style="margin-top: 100px;">
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="주거공간">
+                </div>
+                <div class="service-detail-content">
+                    <h3>주거공간 인테리어</h3>
+                    <p>아파트, 빌라, 주택 등 주거공간의 리모델링과 인테리어를 전문적으로 진행합니다. 
+                    거주자의 라이프스타일을 분석하여 편안하고 실용적인 공간을 만듭니다.</p>
+                    <p>작은 공간도 효율적으로 활용하여 쾌적한 주거 환경을 조성하며, 
+                    세련된 디자인과 기능성을 모두 갖춘 공간을 제공합니다.</p>
+                    <ul>
+                        <li>아파트 전체 리모델링</li>
+                        <li>부분 인테리어 (거실, 주방, 욕실)</li>
+                        <li>빌라 & 주택 인테리어</li>
+                        <li>맞춤 가구 제작 및 설치</li>
+                        <li>수납공간 최적화</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-detail-grid" style="margin-top: 100px;">
+                <div class="service-detail-content">
+                    <h3>특수공간 인테리어</h3>
+                    <p>병원, 학원, 공공시설 등 특수 목적의 공간에 맞는 전문적인 인테리어를 제공합니다. 
+                    각 공간의 특성과 용도를 고려한 맞춤형 설계로 최상의 환경을 구축합니다.</p>
+                    <p>법규 준수와 안전성을 최우선으로 하며, 이용자의 편의성과 
+                    공간의 효율성을 극대화합니다.</p>
+                    <ul>
+                        <li>병원 & 의료시설 인테리어</li>
+                        <li>학원 & 교육시설 인테리어</li>
+                        <li>공공시설 인테리어</li>
+                        <li>체육시설 & 헬스장 인테리어</li>
+                        <li>특수 목적 공간 설계</li>
+                    </ul>
+                </div>
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="특수공간">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">PROCESS</span>
+                <h2 class="section-title">진행 프로세스</h2>
+                <div class="title-divider"></div>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h4>상담 및 현장조사</h4>
+                    <p>고객 요구사항 파악 및 현장 실측, 현황 분석</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h4>설계 및 견적</h4>
+                    <p>컨셉 기획 및 도면 작성, 상세 견적 제시</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h4>계약 및 시공</h4>
+                    <p>계약 체결 후 전문 시공팀의 공사 진행</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h4>완공 및 A/S</h4>
+                    <p>최종 점검 후 인도, 지속적인 사후관리</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>프로젝트 문의</h2>
+            <p>당신의 공간에 대한 아이디어를 함께 나누어보세요</p>
+            <a href="contact.html" class="btn-primary">문의하기</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>(유)모건코리아</h3>
+                    <p>대표이사 최남희</p>
+                    <p>서울특별시 금천구 디지털로9길 46 2층 210호 (이앤씨드림타워7차)</p>
+                    <p>TEL: 02-862-5551 | FAX: 02-862-5550</p>
+                    <p>HP: 010-8768-6394</p>
+                    <p>Email: mogunkr@naver.com</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="service.html">Service</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2017 - 2026 (유)모건코리아. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then((registration) => {
+                console.log('Service Worker registered:', registration);
+            }).catch((error) => {
+                console.log('Service Worker registration failed:', error);
+            });
+        }
+    </script>
+</body>
+</html>
