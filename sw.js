@@ -1,13 +1,13 @@
 // Service Worker for offline functionality
 const CACHE_NAME = 'morgan-korea-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/project.html',
-  '/service.html',
-  '/contact.html',
-  '/style.css',
-  '/script.js'
+  './',
+  './index.html',
+  './project.html',
+  './service.html',
+  './contact.html',
+  './style.css',
+  './script.js'
 ];
 
 // Install Service Worker
